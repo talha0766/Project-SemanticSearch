@@ -100,7 +100,7 @@ def find_most_similar(word, top_n=10):
 
     print(f"Top {top_n} Most Similar Glosses:\n")
     for rank, (i, score) in enumerate(similarities[:top_n], 1):
-        print(f"{rank}. Word: {df['word'][i]}")
+        print(f"→ Word: {df['word'][i].split('_')[0]}") #print(f"{rank}. Word: {df['word'][i]}")
         print(f"   Gloss: {df['gloss'][i]}")
         print(f"   Score: {score:.4f}\n")
 
@@ -131,7 +131,7 @@ def find_most_similar_sentence(sentence, top_n=10):
 
     print(f"Top {top_n} Most Similar Glosses for Sentence:\n→ '{sentence}'\n")
     for rank, (i, score) in enumerate(similarities[:top_n], 1):
-        print(f"{rank}. Word: {df['word'][i]}")
+        print(f"→ Word: {df['word'][i].split('_')[0]}") #print(f"{rank}. Word: {df['word'][i]}")
         print(f"   Gloss: {df['gloss'][i]}")
         print(f"   Score: {score:.4f}\n")
 
